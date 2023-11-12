@@ -1,0 +1,28 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+
+    <ion-tab-button tab="iot" href="/tabs/iot">
+      <ion-icon aria-hidden="true" name="people"></ion-icon>
+      <ion-label>IoT</ion-label>
+    </ion-tab-button>
+
+
+    <ion-tab-button tab="contactos" href="/tabs/contactos">
+      <ion-icon aria-hidden="true" name="people"></ion-icon>
+      <ion-label>Ejercicios</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="seguimiento" href="/tabs/seguimiento">
+      <ion-icon aria-hidden="true" name="people"></ion-icon>
+      <ion-label>Seguimiento</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="contactos" (click)="cerrarSesion()">
+      <ion-icon aria-hidden="true" name="log-out-outline"></ion-icon>
+      <ion-label>Salir</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

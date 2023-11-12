@@ -1,0 +1,15 @@
+.creditos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Asegura que el contenido se ajuste al alto de la pantalla */
+    text-align: center; /* Alinea el texto al centro horizontalmente */
+  }
+  
+  .creditos-container p {
+    margin: 10px 0; /* Agrega margen superior e inferior a los párrafos */
+  }
+  
+  /* Personaliza los estilos según tus preferencias */
+  

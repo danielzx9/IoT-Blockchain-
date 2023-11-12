@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Seguimiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/tabs/nuevoseguimiento" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let seguimientoItem of seguimientos$" (click)="selectSeguimiento(seguimientoItem.id)">
+      <ion-label><h2>Fecha: {{seguimientoItem.fecha}}  </h2>
+        <br>
+        <p>{{seguimientoItem.peso}} KG - {{seguimientoItem.altura}} Mts</p>
+        <p>IMC: {{calcularIMC(seguimientoItem.peso, seguimientoItem.altura) | number:'1.2-2'}}</p>
+        <p>Estado IMC: {{determinarEstadoIMC(calcularIMC(seguimientoItem.peso, seguimientoItem.altura))}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,25 @@
+<!-- home.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blockchain
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let block of blockchain.chain">
+      <ion-label>
+        <h2>Block #{{ block.index }}</h2>
+        <p>Timestamp: {{ block.timestamp }}</p>
+        <p>Data: {{ block.data | json }}</p>
+        <p>previousHash: {{ block.previousHash | json }}</p>
+        <p>Hash: {{ block.hash }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="abrirPuerta()">Agregar Bloque</ion-button>
+</ion-content>

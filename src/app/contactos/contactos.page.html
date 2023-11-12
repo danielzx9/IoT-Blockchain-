@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="header-title">Ejercicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-button (click)="alternarVisibilidadLabel()" class="date-button">Seleccionar Fecha</ion-button>
+  
+
+    <ion-button *ngIf="!ocultarLabel" (click)="alternarVisibilidadLabel()" class="close-button">
+      <ion-icon name="close-outline"></ion-icon>
+    </ion-button>
+    <ion-datetime presentation="date" displayFormat="YYYY-MM-DD" *ngIf="!ocultarLabel" [(ngModel)]="selectedDate" class="date-picker"></ion-datetime>
+
+  
+  
+  
+  
+  
+
+
+  <ion-button expand="full" *ngIf="!ocultarLabel" (click)="filtrarContactos()" class="select-button">Seleccionar</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/tabs/nuevocontacto" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list class="contact-list">
+    <ion-item *ngFor="let contactoItem of contactosFiltrados" (click)="selectContacto(contactoItem.id)" class="contact-item">
+      <ion-label class="contact-label">
+        <h2 class="contact-name">{{contactoItem.nombre}}</h2>
+        <p class="contact-weight">{{contactoItem.peso}} Kg - {{contactoItem.repeticiones}} reps</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>nuevocontacto</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="nuevo(nuevoContacto)" #nuevoForm="ngForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Fecha</ion-label>
+        <ion-input type="text" name="fecha" [(ngModel)]="nuevoContacto.fecha" required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating"> nombre ejercicio </ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="nuevoContacto.nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Peso - Kg</ion-label>
+        <ion-input type="number" name="peso" [(ngModel)]="nuevoContacto.peso"></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label position="floating"> repeticiones </ion-label>
+        <ion-input type="text" name="repeticiones" [(ngModel)]="nuevoContacto.repeticiones"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Nota </ion-label>
+        <ion-input type="text" name="nota" [(ngModel)]="nuevoContacto.nota"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <ion-button color="primary" expand="block" type="submit" [disabled]="!nuevoForm.form.valid">Nuevo
+        Ejercicio</ion-button>
+    </div>
+  </form>
+</ion-content>

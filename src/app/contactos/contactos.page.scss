@@ -1,0 +1,80 @@
+/* Clase para el título del encabezado */
+.header-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Clase para el contenido */
+  .content {
+    padding: 16px;
+  }
+  
+  /* Clase para el botón de fecha */
+  .date-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+
+.date-picker-container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    margin-top: 16px; 
+  }
+  
+
+  .close-button {
+    background: none; 
+    border: none; 
+    color: #ff0000; 
+    cursor: pointer;
+    margin-right: 8px; 
+  }
+  
+ 
+  .date-picker {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto; 
+    text-align: center; 
+    display: block; 
+  }
+  
+  
+  
+  
+  
+ 
+  .select-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+
+  .contact-list {
+    margin-top: 16px;
+  }
+  
+
+  .contact-item {
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  
+
+  .contact-label {
+    text-align: left;
+  }
+  
+
+  .contact-name {
+    font-size: 18px;
+  }
+  
+
+  .contact-weight {
+    color: #888;
+  }
+  

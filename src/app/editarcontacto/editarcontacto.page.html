@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>editarcontacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="seleccionado">
+  
+  <form (ngSubmit)="editar()" #editarForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">fecha</ion-label>
+        <ion-input type="text" name="fecha" [(ngModel)]="seleccionado.fecha" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">nombre</ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="seleccionado.nombre" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">peso</ion-label>
+        <ion-input type="text" name="peso" [(ngModel)]="seleccionado.peso" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">repeticiones</ion-label>
+        <ion-input type="text" name="repeticiones" [(ngModel)]="seleccionado.repeticiones" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">nota</ion-label>
+        <ion-input type="text" name="nota" [(ngModel)]="seleccionado.nota" ></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <ion-button color="primary" expand="block" type="submit" [disabled]="!editarForm.form.valid">
+        Editar Ejercicio
+      </ion-button>
+      <ion-button color="secondary" expand="block" type="button" (click)="regresar()"> Cancelar </ion-button>
+    </div>
+  </form>
+</ion-content>
